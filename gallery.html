@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<base href="/TFF_Website/">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gallery — The Forward Foundation</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/TFF_Website/style.css">
+<link rel="stylesheet" href="style.css">
 
 </head>
 <body>
@@ -15,14 +16,14 @@
 <!-- ===== NAV ===== -->
 <header class="site-header">
   <div class="wrap nav-inner">
-    <a href="/TFF_Website/index.html" class="logo-tile"><img src="/TFF_Website/assets/img/logo.png" alt="The Forward Foundation"></a>
+    <a href="index.html" class="logo-tile"><img src="assets/img/logo.png" alt="The Forward Foundation"></a>
     <ul class="nav-links">
-      <li><a href="/TFF_Website/index.html" class="nav-link">Home</a></li>
-      <li><a href="/TFF_Website/about.html" class="nav-link">About Us</a></li>
-      <li><a href="/TFF_Website/projects.html" class="nav-link">Projects</a></li>
-      <li><a href="/TFF_Website/gallery.html" class="nav-link active">Gallery</a></li>
-      <li><a href="/TFF_Website/career.html" class="nav-link">Career</a></li>
-      <li><a href="/TFF_Website/contact.html" class="nav-link">Contact</a></li>
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link">About Us</a></li>
+      <li><a href="projects.html" class="nav-link">Projects</a></li>
+      <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+      <li><a href="career.html" class="nav-link">Career</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
     </ul>
     <a href="https://rzp.io/rzp/tffindia" target="_blank" class="btn-donate donate-glow">
       <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="10" stroke-width="1.5"/><path stroke-linecap="round" stroke-width="1.5" d="M2 12h20M12 2c2.5 2.5 4 6 4 10s-1.5 7.5-4 10c-2.5-2.5-4-6-4-10s1.5-7.5 4-10z"/></svg>
@@ -31,58 +32,170 @@
     <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
   <div id="mobile-menu">
-    <a href="/TFF_Website/index.html" class="mlink">Home</a>
-    <a href="/TFF_Website/about.html" class="mlink">About Us</a>
-    <a href="/TFF_Website/projects.html" class="mlink">Projects</a>
-    <a href="/TFF_Website/gallery.html" class="mlink active">Gallery</a>
-    <a href="/TFF_Website/career.html" class="mlink">Career</a>
-    <a href="/TFF_Website/contact.html" class="mlink">Contact</a>
+    <a href="index.html" class="mlink">Home</a>
+    <a href="about.html" class="mlink">About Us</a>
+    <a href="projects.html" class="mlink">Projects</a>
+    <a href="gallery.html" class="mlink active">Gallery</a>
+    <a href="career.html" class="mlink">Career</a>
+    <a href="contact.html" class="mlink">Contact</a>
     <a href="https://rzp.io/rzp/tffindia" target="_blank" class="mdonate donate-glow">Donate Now</a>
   </div>
 </header>
 
 <!-- ===== GALLERY HERO ===== -->
 <section class="gallery-hero">
-  <div class="wrap">
-    <div class="gallery-hero-left">
+  <div class="wrap gh-wrap">
+
+    <!-- LEFT -->
+    <div class="gh-left">
       <div class="eyebrow-pill"><span class="dot"></span>GALLERY</div>
-      <h1>Our Work<br>in <em>Pictures</em></h1>
-      <p class="hero-desc">Moments of change, people of purpose and a greener tomorrow.</p>
-      <div class="hero-divider"></div>
-      <div class="hero-tagline">
-        <span>LIVE</span><span class="sep"></span><span>DEVELOP</span><span class="sep"></span><span>SUSTAIN</span>
+      <h1 class="gh-h1">Our Work<br>in <em>Pictures</em></h1>
+      <p class="gh-desc">Moments of change, people of purpose and a greener tomorrow. Explore our journey on the ground.</p>
+
+      <!-- Filter tags -->
+      <div class="gh-filters">
+        <a href="gallery.html" class="gh-tag gh-tag-active">All</a>
+        <a href="gallery-rain.html" class="gh-tag">Reforestation</a>
+        <a href="gallery-lake.html" class="gh-tag">Community</a>
+        <a href="gallery-volunteer.html" class="gh-tag">Education</a>
+      </div>
+
+      <div class="gh-divider"></div>
+      <div class="gh-tagline">
+        <span>LIVE</span><span class="gh-sep">•</span><span>DEVELOP</span><span class="gh-sep">•</span><span>SUSTAIN</span>
       </div>
     </div>
-    <div class="gallery-hero-right">
-      <!-- Decorative leaf -->
-      <svg class="hero-leaf-deco" viewBox="0 0 200 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M100 280 C100 280 10 200 10 120 C10 40 100 10 100 10 C100 10 190 40 190 120 C190 200 100 280 100 280Z" fill="#2f9e57"/>
-        <line x1="100" y1="10" x2="100" y2="280" stroke="#1a5c35" stroke-width="2"/>
-        <line x1="100" y1="80" x2="60" y2="120" stroke="#1a5c35" stroke-width="1.5"/>
-        <line x1="100" y1="110" x2="145" y2="145" stroke="#1a5c35" stroke-width="1.5"/>
-        <line x1="100" y1="150" x2="58" y2="185" stroke="#1a5c35" stroke-width="1.5"/>
-        <line x1="100" y1="180" x2="148" y2="210" stroke="#1a5c35" stroke-width="1.5"/>
+
+    <!-- RIGHT — floating collage with leaf behind -->
+    <div class="gh-right">
+
+      <!-- Botanical SVG behind images -->
+      <svg class="gh-leaf-bg" viewBox="0 0 560 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+        <!-- ======= BACKGROUND CIRCLE GLOW ======= -->
+        <circle cx="275" cy="240" r="195" fill="#d4e8cc" opacity="0.28"/>
+        <circle cx="275" cy="240" r="140" fill="#c5e0bb" opacity="0.18"/>
+
+        <!-- ======= LARGE BACKGROUND LEAVES ======= -->
+        <g fill="#b8d9b0" opacity="0.55">
+          <!-- Top tall center leaf -->
+          <path d="M270 220 C256 178 258 128 270 82 C282 128 284 178 270 220Z"/>
+          <!-- Top left sweeping leaf -->
+          <path d="M258 215 C228 178 198 148 166 122
+                   C172 156 196 186 258 215Z"/>
+          <!-- Top right sweeping leaf -->
+          <path d="M282 212 C314 175 346 146 378 122
+                   C370 158 348 188 282 212Z"/>
+          <!-- Far left top leaf -->
+          <path d="M246 222 C204 178 152 156 98 152
+                   C132 188 180 212 246 222Z"/>
+          <!-- Far right top leaf -->
+          <path d="M294 218 C338 175 390 154 444 152
+                   C408 190 360 214 294 218Z"/>
+          <!-- Left mid leaf -->
+          <path d="M190 295 C156 278 124 276 96 284
+                   C124 304 158 308 190 295Z"/>
+          <!-- Left lower leaf -->
+          <path d="M200 318 C170 302 140 300 114 308
+                   C140 330 172 334 200 318Z"/>
+          <!-- Left drooping leaf -->
+          <path d="M204 336 C184 364 174 396 176 428
+                   C200 406 210 372 204 336Z"/>
+          <!-- Left second drooping leaf -->
+          <path d="M228 350 C212 374 206 404 210 432
+                   C232 412 238 380 228 350Z"/>
+          <!-- Right upper leaf -->
+          <path d="M358 262 C392 246 424 248 448 262
+                   C424 284 392 286 358 262Z"/>
+          <!-- Right mid leaf -->
+          <path d="M354 288 C390 276 422 282 446 300
+                   C414 310 384 304 354 288Z"/>
+          <!-- Right lower leaf -->
+          <path d="M348 312 C378 318 402 334 412 358
+                   C384 350 362 334 348 312Z"/>
+          <!-- Far right small -->
+          <path d="M370 244 C396 226 424 222 446 230
+                   C426 252 398 258 370 244Z"/>
+          <!-- Bottom right leaf -->
+          <path d="M336 332 C358 342 372 362 372 382
+                   C352 370 340 352 336 332Z"/>
+        </g>
+
+        <!-- ======= ACCENT LIGHTER LEAVES (on top) ======= -->
+        <g fill="#cde8c5" opacity="0.7">
+          <!-- Small top center -->
+          <path d="M270 180 C264 160 265 138 270 118
+                   C275 138 276 160 270 180Z"/>
+          <!-- Small top left -->
+          <path d="M262 188 C244 168 226 150 208 136
+                   C214 156 232 174 262 188Z"/>
+          <!-- Small top right -->
+          <path d="M278 186 C298 166 318 148 338 136
+                   C330 158 312 176 278 186Z"/>
+        </g>
+
+        <!-- ======= STEMS & VEINS ======= -->
+        <g fill="none" stroke="#8fb88a" stroke-linecap="round" stroke-linejoin="round" opacity="0.65">
+          <!-- Main vertical stem -->
+          <path d="M270 255 C270 210 270 155 270 88" stroke-width="1.8"/>
+          <!-- Left branch -->
+          <path d="M268 240 C238 200 206 168 168 126" stroke-width="1.4"/>
+          <!-- Right branch -->
+          <path d="M272 238 C304 198 338 168 374 126" stroke-width="1.4"/>
+          <!-- Far left branch -->
+          <path d="M262 232 C220 188 168 164 102 156" stroke-width="1.2"/>
+          <!-- Far right branch -->
+          <path d="M278 230 C320 188 374 164 440 156" stroke-width="1.2"/>
+          <!-- Left horizontal stem -->
+          <path d="M206 295 C170 284 136 282 100 288" stroke-width="1.3"/>
+          <path d="M210 320 C176 308 144 306 118 312" stroke-width="1.1"/>
+          <!-- Left drooping stem -->
+          <path d="M210 338 C196 368 182 398 178 426" stroke-width="1.2"/>
+          <!-- Right stems -->
+          <path d="M340 272 C376 256 412 252 446 264" stroke-width="1.3"/>
+          <path d="M338 294 C374 284 408 288 444 302" stroke-width="1.1"/>
+          <path d="M334 316 C360 326 386 342 408 360" stroke-width="1.1"/>
+          <!-- Small leaf veins top -->
+          <path d="M270 175 C264 158 265 140 270 122" stroke-width="0.9"/>
+          <path d="M264 185 C248 165 230 150 212 138" stroke-width="0.9"/>
+          <path d="M276 183 C294 163 314 148 334 138" stroke-width="0.9"/>
+        </g>
+
       </svg>
-      <div class="hero-img-blob">
-        <img src="/TFF_Website/OFA/lake.jpeg" alt="Wildlife and nature">
-        <div class="stories-badge">
-          <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
-            <rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5" fill="currentColor"/><path d="M21 15l-5-5L5 21"/>
-          </svg>
-          <p>Stories of People Projects and a Greener Tomorrow</p>
+
+      <!-- Large image (left, slight counter-rotate) -->
+      <div class="gh-img-large">
+        <img src="Gallery_Page/Gallery_Title/CommunityEngagement_Title.png" alt="Community Engagement">
+        <span class="gh-img-label">Community Engagement</span>
+      </div>
+
+      <!-- Two small images stacked right -->
+      <div class="gh-img-stack">
+        <div class="gh-img-small gh-img-top">
+          <img src="Gallery_Page/Gallery_Title/RainWater_Title.png" alt="Rain to Tap">
+          <span class="gh-img-label">Rain to Tap</span>
+        </div>
+        <div class="gh-img-small gh-img-bot">
+          <img src="Gallery_Page/Gallery_Title/Solar_Title.png" alt="Solar">
+          <span class="gh-img-label">Solar</span>
         </div>
       </div>
+
     </div>
   </div>
 </section>
 
 <!-- ===== PILLAR CARDS ===== -->
 <section class="pillars-sec">
+  <div class="pillars-sec-header">
+    <div class="eyebrow-sm" style="font-family:'Archivo',sans-serif;font-size:10.5px;font-weight:700;letter-spacing:0.16em;color:#b0863a;margin-bottom:10px;">OUR FOCUS AREAS</div>
+    <h2 style="font-family:'Spectral',serif;font-size:clamp(1.8rem,3vw,2.4rem);font-weight:700;color:#1a1a1a;margin:0;">Explore by Category</h2>
+  </div>
   <div class="pillars-grid">
 
     <!-- Rain to Tap -->
-    <a class="pillar-card" href="/TFF_Website/gallery-rain.html">
-      <img class="pillar-bg" src="/TFF_Website/OFA/rainwater.jpeg" alt="Rain to Tap">
+    <a class="pillar-card" href="gallery-rain.html">
+      <img class="pillar-bg" src="OFA/rainwater.jpeg" alt="Rain to Tap">
       <div class="pillar-overlay"></div>
       <div class="pillar-content">
         <div class="pillar-icon">
@@ -101,8 +214,8 @@
     </a>
 
     <!-- Tree Plantation -->
-    <a class="pillar-card" href="/TFF_Website/gallery-tree.html">
-      <img class="pillar-bg" src="/TFF_Website/OFA/tree.jpeg" alt="Tree Plantation">
+    <a class="pillar-card" href="gallery-tree.html">
+      <img class="pillar-bg" src="OFA/tree.jpeg" alt="Tree Plantation">
       <div class="pillar-overlay"></div>
       <div class="pillar-content">
         <div class="pillar-icon">
@@ -121,8 +234,8 @@
     </a>
 
     <!-- Lake Restoration -->
-    <a class="pillar-card" href="/TFF_Website/gallery-lake.html">
-      <img class="pillar-bg" src="/TFF_Website/OFA/lake.jpeg" alt="Lake Restoration">
+    <a class="pillar-card" href="gallery-lake.html">
+      <img class="pillar-bg" src="OFA/lake.jpeg" alt="Lake Restoration">
       <div class="pillar-overlay"></div>
       <div class="pillar-content">
         <div class="pillar-icon">
@@ -141,8 +254,8 @@
     </a>
 
     <!-- Volunteer Engagement -->
-    <a class="pillar-card" href="/TFF_Website/gallery-volunteer.html">
-      <img class="pillar-bg" src="/TFF_Website/OFA/community.jpeg" alt="Volunteer Engagement">
+    <a class="pillar-card" href="gallery-volunteer.html">
+      <img class="pillar-bg" src="OFA/community.jpeg" alt="Volunteer Engagement">
       <div class="pillar-overlay"></div>
       <div class="pillar-content">
         <div class="pillar-icon">
@@ -184,10 +297,10 @@
     </div>
     <div class="rp-right">
       <div class="polaroid-strip">
-        <div class="polaroid"><img src="/TFF_Website/Gallery/image1.jpeg" alt="Impact 1"></div>
-        <div class="polaroid"><img src="/TFF_Website/Gallery/image2.jpeg" alt="Impact 2"></div>
-        <div class="polaroid"><img src="/TFF_Website/Gallery/image3.jpeg" alt="Impact 3"></div>
-        <div class="polaroid"><img src="/TFF_Website/Gallery/image4.jpeg" alt="Impact 4"></div>
+        <div class="polaroid"><img src="Gallery/image1.jpeg" alt="Impact 1"></div>
+        <div class="polaroid"><img src="Gallery/image2.jpeg" alt="Impact 2"></div>
+        <div class="polaroid"><img src="Gallery/image3.jpeg" alt="Impact 3"></div>
+        <div class="polaroid"><img src="Gallery/image4.jpeg" alt="Impact 4"></div>
       </div>
     </div>
   </div>
@@ -196,7 +309,7 @@
 <footer id="contact" class="site-footer"><div class="wrap footer-inner">
   <div class="footer-grid">
     <div class="footer-brand">
-      <span class="logo-tile"><img src="/TFF_Website/assets/img/logo.png" alt="The Forward Foundation"></span>
+      <span class="logo-tile"><img src="assets/img/logo.png" alt="The Forward Foundation"></span>
       <p>Environmental Solutions for Climate-Secure Communities. Registered NGO · India.</p>
       <div class="footer-tag"><span class="t">LIVE</span><span class="sep">|</span><span class="t">DEVELOP</span><span class="sep">|</span><span class="t">SUSTAIN</span></div>
       <div class="footer-social">
@@ -211,9 +324,9 @@
         </a>
       </div>
     </div>
-    <div class="footer-col"><h4>ORGANISATION</h4><ul><li><a href="/TFF_Website/about.html">About Us</a></li><li><a href="/TFF_Website/projects.html">Projects</a></li><li><a href="/TFF_Website/career.html">Career</a></li></ul></div>
-    <div class="footer-col"><h4>RESOURCES</h4><ul><li><a href="/TFF_Website/gallery.html">Gallery</a></li><li><a href="#">Annual Reports</a></li></ul></div>
-    <div class="footer-col"><h4>CONNECT</h4><ul><li><a href="/TFF_Website/contact.html">Contact Us</a></li><li><a href="https://rzp.io/rzp/tffindia" target="_blank" class="footer-donate-glow">Donate</a></li></ul></div>
+    <div class="footer-col"><h4>ORGANISATION</h4><ul><li><a href="about.html">About Us</a></li><li><a href="projects.html">Projects</a></li><li><a href="career.html">Career</a></li></ul></div>
+    <div class="footer-col"><h4>RESOURCES</h4><ul><li><a href="gallery.html">Gallery</a></li><li><a href="#">Annual Reports</a></li></ul></div>
+    <div class="footer-col"><h4>CONNECT</h4><ul><li><a href="contact.html">Contact Us</a></li><li><a href="https://rzp.io/rzp/tffindia" target="_blank" class="footer-donate-glow">Donate</a></li></ul></div>
   </div>
   <div class="footer-bottom"><span>&copy; 2025 The Forward Foundation &middot; All Rights Reserved.</span><a href="https://theforwardfoundation.org">theforwardfoundation.org</a></div>
 </div></footer>
