@@ -6,8 +6,475 @@
 <title>Tree Plantation — The Forward Foundation</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../style.css">
+<!-- Non-blocking font load -->
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Archivo:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
+<!-- Inline critical CSS; load full stylesheet async -->
+<style>
+/* ===== The Forward Foundation — redesigned styles ===== */
+:root {
+  --bg: #f7f5ef;
+  --ink: #1c2a22;
+  --muted: #55615a;
+  --muted2: #6a756c;
+  --green: #2f9e57;
+  --green-dk: #257a45;
+  --gold: #b0863a;
+  --line: #e4e0d4;
+  --dark: #14241a;
+  --serif: "Spectral", serif;
+  --sans: "Archivo", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+::selection {
+  background: var(--green);
+  color: #fff;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* ---- Nav ---- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #e8e8e8;
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.06);
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 14px 0;
+}
+.logo-tile {
+  display: inline-flex;
+  align-items: center;
+}
+.logo-tile img {
+  height: 44px;
+  width: auto;
+  display: block;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+}
+.nav-link {
+  text-decoration: none;
+  color: #333333;
+  font-weight: 500;
+  font-size: 14.5px;
+  padding: 8px 12px;
+  border-radius: 100px;
+  transition: color 0.2s, background 0.2s;
+}
+.nav-link:hover {
+  color: var(--green);
+}
+.nav-link.active {
+  background: var(--green);
+  color: #fff;
+  font-weight: 600;
+}
+.nav-link.active:hover {
+  color: #fff;
+}
+.btn-donate {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--green);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14.5px;
+  padding: 11px 22px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px -6px rgba(47, 158, 87, 0.6);
+  transition: background 0.2s, transform 0.2s;
+}
+.btn-donate:hover {
+  background: var(--green-dk);
+  transform: translateY(-1px);
+}
+
+/* ---- Donate glow (shared by every real "Donate" CTA on the page) ---- */
+.donate-glow {
+  position: relative;
+  animation: donate-glow-strong 2s ease-in-out infinite;
+}
+@keyframes donate-glow-strong {
+  0%, 100% {
+    box-shadow: 0 6px 18px -6px rgba(47, 158, 87, 0.65),
+      0 0 0 0 rgba(47, 158, 87, 0.55);
+  }
+  50% {
+    box-shadow: 0 6px 24px -4px rgba(47, 158, 87, 0.8),
+      0 0 34px 12px rgba(47, 158, 87, 0.6);
+  }
+}
+/* variant for donate buttons that sit on a green/dark card (white button) */
+.btn-white.donate-glow {
+  animation-name: donate-glow-white;
+}
+@keyframes donate-glow-white {
+  0%, 100% {
+    box-shadow: 0 10px 24px -8px rgba(0, 0, 0, 0.28),
+      0 0 0 0 rgba(255, 255, 255, 0.55);
+  }
+  50% {
+    box-shadow: 0 10px 30px -6px rgba(0, 0, 0, 0.32),
+      0 0 32px 12px rgba(255, 255, 255, 0.7);
+  }
+}
+/* small text-glow variant for the plain-text footer donate link */
+.footer-donate-glow {
+  color: #7fc496 !important;
+  font-weight: 700 !important;
+  animation: footer-donate-pulse 2s ease-in-out infinite;
+}
+@keyframes footer-donate-pulse {
+  0%, 100% {
+    text-shadow: 0 0 0 rgba(127, 196, 150, 0);
+  }
+  50% {
+    text-shadow: 0 0 10px rgba(127, 196, 150, 0.95);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .donate-glow,
+  .footer-donate-glow {
+    animation: none;
+  }
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.hamburger span {
+  width: 24px;
+  height: 2px;
+  background: var(--ink);
+  border-radius: 2px;
+  display: block;
+}
+#mobile-menu {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.35s ease,
+    opacity 0.3s ease;
+  background: #fff;
+  border-top: 1px solid var(--line);
+}
+#mobile-menu.open {
+  max-height: 520px;
+  opacity: 1;
+}
+#mobile-menu .mlink {
+  padding: 11px 40px;
+  color: #333;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  display: block;
+}
+#mobile-menu .mlink.active {
+  color: var(--green);
+  font-weight: 600;
+}
+#mobile-menu .mdonate {
+  margin: 8px 40px 16px;
+  padding: 12px;
+  background: var(--green);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+}
+
+/* ---- Hero ---- */
+.hero {
+  display: grid;
+  grid-template-columns: 1.02fr 0.98fr;
+  gap: 56px;
+  align-items: center;
+  padding: 70px 0 56px;
+}
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 15px;
+  border: 1px solid #d8ceb0;
+  border-radius: 100px;
+  background: #fbf3df;
+  margin-bottom: 28px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: #8a6c2c;
+}
+.eyebrow .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+.hero h1 {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 62px;
+  line-height: 1.04;
+  letter-spacing: -0.015em;
+  margin-bottom: 24px;
+}
+.hero h1 em {
+  color: var(--green);
+  font-style: italic;
+  font-weight: 500;
+}
+.hero .lead {
+  font-size: 17.5px;
+  line-height: 1.62;
+  color: var(--muted);
+  max-width: 500px;
+  margin-bottom: 36px;
+}
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  background: #fff;
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15.5px;
+  padding: 15px 28px;
+  border-radius: 12px;
+  border: 1px solid #d3cdbd;
+  transition: all 0.2s;
+}
+.btn-outline:hover {
+  border-color: var(--green);
+  color: var(--green);
+}
+.btn-primary-lg {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  background: var(--green);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15.5px;
+  padding: 15px 28px;
+  border-radius: 12px;
+  box-shadow: 0 10px 24px -8px rgba(47, 158, 87, 0.55);
+  transition: background 0.2s;
+}
+.btn-primary-lg:hover {
+  background: var(--green-dk);
+}
+.tagline {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #a08a55;
+}
+.tagline span.t {
+  font-family: var(--serif);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.34em;
+}
+.tagline .sep {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #cbb98a;
+}
+.hero-media {
+  position: relative;
+}
+.hero-photo {
+  border-radius: 22px;
+  overflow: hidden;
+  aspect-ratio: 4/4.5;
+  border: 1px solid #ded8c9;
+  box-shadow: 0 30px 60px -30px rgba(28, 42, 34, 0.4);
+}
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.badge-card {
+  position: absolute;
+  left: -22px;
+  bottom: 40px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 18px 22px;
+  box-shadow: 0 20px 40px -18px rgba(28, 42, 34, 0.28);
+  min-width: 172px;
+}
+.badge-card .num {
+  font-family: var(--serif);
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--green);
+  line-height: 1;
+}
+.badge-card .cap {
+  font-size: 12.5px;
+  color: var(--muted2);
+  font-weight: 500;
+  margin-top: 4px;
+}
+.badge-dark {
+  position: absolute;
+  right: -14px;
+  top: 34px;
+  background: var(--dark);
+  color: #f0efe7;
+  border-radius: 14px;
+  padding: 14px 18px;
+  box-shadow: 0 20px 40px -18px rgba(28, 42, 34, 0.45);
+}
+.badge-dark .k {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: #9fb0a4;
+  font-weight: 600;
+}
+.badge-dark .v {
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 3px;
+}
+
+/* ---- Stats ---- */
+.stats-wrap {
+  padding: 10px 0 68px;
+}
+#stats-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #fff;
+  overflow: hidden;
+}
+.stat {
+  padding: 28px 22px;
+  border-right: 1px solid #eeece3;
+  text-align: center;
+}
+.stat:last-child {
+  border-right: none;
+}
+.stat-num {
+  font-family: var(--serif);
+  font-size: 34px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1;
+}
+.stat-label {
+  font-size: 12.5px;
+  color: var(--muted2);
+  font-weight: 500;
+  margin-top: 8px;
+  line-height: 1.4;
+}
+
+/* ---- Section heads ---- */
+.sec-eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+.sec-title {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 42px;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  margin-bottom: 10px;
+}
+
+/* ---- Focus ---- */
+.focus-sec {
+  background: #eef2e8;
+  border-top: 1px solid #e0e5d8;
+  border-bottom: 1px solid #e0e5d8;
+  padding: 76px 0;
+}
+.focus-sec .head {
+  text-align: center;
+  margin-bottom: 48px;
+}
+.focus-sec .head p {
+  font-size: 15.5px;
+  color: var(--muted);
+}
+.focus-grid {
+
+</style>
+<link rel="preload" href="../style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="../style.css"></noscript>
 </head>
 <body>
 
