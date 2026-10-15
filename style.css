@@ -2229,10 +2229,12 @@ body.career-page{background:#ffffff;color:#1a1a1a;font-family:'Inter',system-ui,
 
 /* ---- REAL PEOPLE SECTION ---- */
 .real-people-sec {
-  background: var(--bg);
-  padding: 60px 0 80px;
+  background: #f0f5eb;
+  padding: 80px 0 96px;
   position: relative;
   overflow: hidden;
+  border-top: 1px solid #d5e5c5;
+  margin-top: 0;
 }
 .real-people-inner {
   max-width: 1200px;
@@ -2304,6 +2306,7 @@ body.career-page{background:#ffffff;color:#1a1a1a;font-family:'Inter',system-ui,
   object-fit: cover;
   display: block;
   border-radius: 2px;
+  cursor: zoom-in;
 }
 .polaroid:nth-child(1) { transform: rotate(-5deg) translateY(-10px); z-index: 4; margin-right: -20px; }
 .polaroid:nth-child(2) { transform: rotate(2deg) translateY(0px); z-index: 3; margin-right: -20px; }
@@ -3472,3 +3475,78 @@ body.career-page{background:#ffffff;color:#1a1a1a;font-family:'Inter',system-ui,
 }
 .op-card:hover .op-arrow{color:#fff;gap:8px;}
 .op-arrow svg{width:12px;height:12px;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;}
+
+/* ===== TRUSTEE DETAIL ACCORDION ===== */
+.trustee-details {
+  margin-top: 22px;
+  border-top: 1px solid var(--line);
+}
+.td-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--line);
+  cursor: pointer;
+  font-family: var(--sans);
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: .01em;
+  text-align: left;
+  transition: color .2s;
+}
+.td-toggle:hover { color: var(--green); }
+.td-toggle.open { color: var(--green); }
+.td-chevron {
+  width: 16px; height: 16px;
+  flex-shrink: 0;
+  transition: transform .25s;
+}
+.td-toggle.open .td-chevron { transform: rotate(180deg); }
+.td-body {
+  display: none;
+  padding: 14px 0 6px;
+  border-bottom: 1px solid var(--line);
+}
+.td-body.open { display: block; }
+.td-body p {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--muted);
+}
+.expertise-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.expertise-tags span {
+  display: inline-block;
+  padding: 5px 12px;
+  background: rgba(47, 158, 87, .1);
+  color: var(--green);
+  border: 1px solid rgba(47, 158, 87, .25);
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .02em;
+}
+.trustee-linkedin {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  padding: 9px 18px;
+  background: #0077b5;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background .2s, transform .2s;
+}
+.trustee-linkedin:hover { background: #005f94; transform: translateY(-1px); }
+.trustee-linkedin svg { width: 16px; height: 16px; }

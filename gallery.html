@@ -158,7 +158,6 @@ a {
       0 0 32px 12px rgba(255, 255, 255, 0.7);
   }
 }
-/* small text-glow variant for the plain-text footer donate link */
 .footer-donate-glow {
   color: #7fc496 !important;
   font-weight: 700 !important;
@@ -518,16 +517,6 @@ a {
       <h1 class="gh-h1">Our Work<br>in <em>Pictures</em></h1>
       <p class="gh-desc">Moments of change, people of purpose and a greener tomorrow. Explore our journey on the ground.</p>
 
-      <!-- Filter tags -->
-      <div class="gh-filters">
-        <a href="gallery.html" class="gh-tag gh-tag-active">All</a>
-        <a href="gallery-tree.html" class="gh-tag">Tree Plantation</a>
-        <a href="gallery-lake.html" class="gh-tag">Lake Restoration</a>
-        <a href="gallery-solar.html" class="gh-tag">Solar Energy</a>
-        <a href="gallery-rwh.html" class="gh-tag">Rain to Tap</a>
-        <a href="gallery-community.html" class="gh-tag">Community</a>
-      </div>
-
       <div class="gh-divider"></div>
       <div class="gh-tagline">
         <span>LIVE</span><span class="gh-sep">•</span><span>DEVELOP</span><span class="gh-sep">•</span><span>SUSTAIN</span>
@@ -785,10 +774,10 @@ a {
     </div>
     <div class="rp-right">
       <div class="polaroid-strip">
-        <div class="polaroid"><img src="Gallery_Page/Gallery_Tree/Tree_Plantation_1.webp" alt="Tree Plantation" loading="lazy"></div>
-        <div class="polaroid"><img src="Gallery_Page/Gallery_Lake/Lake_1.webp" alt="Lake Restoration" loading="lazy"></div>
-        <div class="polaroid"><img src="Gallery_Page/Gallery_RWH/RWH_1.webp" alt="Rain to Tap" loading="lazy"></div>
-        <div class="polaroid"><img src="Gallery_Page/Gallery_Community/Community_1.webp" alt="Community Engagement" loading="lazy"></div>
+        <div class="polaroid" onclick="openGalleryLb(0)"><img src="Gallery_Page/Gallery_Tree/Tree_Plantation_1.webp" alt="Tree Plantation" loading="lazy"></div>
+        <div class="polaroid" onclick="openGalleryLb(1)"><img src="Gallery_Page/Gallery_Lake/Lake_1.webp" alt="Lake Restoration" loading="lazy"></div>
+        <div class="polaroid" onclick="openGalleryLb(2)"><img src="Gallery_Page/Gallery_RWH/RWH_1.webp" alt="Rain to Tap" loading="lazy"></div>
+        <div class="polaroid" onclick="openGalleryLb(3)"><img src="Gallery_Page/Gallery_Community/Community_1.webp" alt="Community Engagement" loading="lazy"></div>
       </div>
     </div>
   </div>
@@ -827,5 +816,52 @@ document.getElementById('hamburger').addEventListener('click', function() {
 });
 </script>
 
+
+<div class="lightbox-modal" id="gallery-lightbox" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.92);align-items:center;justify-content:center;cursor:zoom-out;">
+  <button onclick="closeGalleryLb()" style="position:absolute;top:24px;right:28px;background:none;border:none;cursor:pointer;padding:8px;">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+  </button>
+  <button onclick="galleryLbNav(-1)" style="position:absolute;left:24px;background:rgba(255,255,255,0.12);border:none;border-radius:50%;width:48px;height:48px;cursor:pointer;display:flex;align-items:center;justify-content:center;">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+  </button>
+  <img id="gallery-lb-img" src="" alt="" style="max-width:88vw;max-height:88vh;border-radius:6px;box-shadow:0 20px 80px rgba(0,0,0,0.6);transition:opacity 0.2s;object-fit:contain;">
+  <button onclick="galleryLbNav(1)" style="position:absolute;right:24px;background:rgba(255,255,255,0.12);border:none;border-radius:50%;width:48px;height:48px;cursor:pointer;display:flex;align-items:center;justify-content:center;">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+  </button>
+</div>
+
+<script>
+var galleryLbImgs = [
+  'Gallery_Page/Gallery_Tree/Tree_Plantation_1.webp',
+  'Gallery_Page/Gallery_Lake/Lake_1.webp',
+  'Gallery_Page/Gallery_RWH/RWH_1.webp',
+  'Gallery_Page/Gallery_Community/Community_1.webp'
+];
+var galleryLbIdx = 0;
+function openGalleryLb(idx) {
+  galleryLbIdx = idx;
+  document.getElementById('gallery-lb-img').src = galleryLbImgs[idx];
+  var lb = document.getElementById('gallery-lightbox');
+  lb.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+function closeGalleryLb() {
+  document.getElementById('gallery-lightbox').style.display = 'none';
+  document.body.style.overflow = '';
+}
+function galleryLbNav(dir) {
+  galleryLbIdx = (galleryLbIdx + dir + galleryLbImgs.length) % galleryLbImgs.length;
+  document.getElementById('gallery-lb-img').src = galleryLbImgs[galleryLbIdx];
+}
+document.getElementById('gallery-lightbox').addEventListener('click', function(e) {
+  if (e.target === this) closeGalleryLb();
+});
+document.addEventListener('keydown', function(e) {
+  if (document.getElementById('gallery-lightbox').style.display !== 'flex') return;
+  if (e.key === 'ArrowRight') galleryLbNav(1);
+  if (e.key === 'ArrowLeft') galleryLbNav(-1);
+  if (e.key === 'Escape') closeGalleryLb();
+});
+</script>
 </body>
 </html>
