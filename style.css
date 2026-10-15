@@ -3303,3 +3303,726 @@ body.career-page{background:#ffffff;color:#1a1a1a;font-family:'Inter',system-ui,
   }
   .finance-item { padding: 0; }
 }
+
+/* ============================================================
+   Tree Plantation project page  (projects/tree-plantation.html)
+   ============================================================ */
+
+/* Benefits grid */
+.tp-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+.tp-benefit-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 20px 16px;
+  text-align: center;
+}
+.tp-benefit-icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  display: block;
+}
+.tp-benefit-card h3 {
+  font-family: var(--serif);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+.tp-benefit-card p {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* How we plant steps */
+.tp-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 24px;
+}
+.tp-step {
+  border-left: 4px solid var(--green);
+  background: #fff;
+  padding: 18px 20px;
+  border-radius: 0 10px 10px 0;
+}
+.tp-step-num {
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--green);
+  margin-bottom: 8px;
+}
+.tp-step h3 {
+  font-family: var(--serif);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+.tp-step p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Measure & report grid */
+.tp-measure-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+.tp-measure-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 18px;
+}
+.tp-measure-card h3 {
+  font-family: var(--serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+.tp-measure-card p {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Team activities */
+.tp-activities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+.tp-activity {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 18px;
+}
+.tp-activity h3 {
+  font-family: var(--serif);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+.tp-activity p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* CSR partner logos */
+.tp-partner-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+.tp-partner-logos span {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 8px 14px;
+  background: #fff;
+  font-size: 0.88rem;
+  color: var(--ink);
+  font-weight: 500;
+}
+
+/* Follow your tree checklist */
+.tp-follow-list {
+  display: grid;
+  gap: 14px;
+  margin-top: 20px;
+}
+.tp-follow-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.95rem;
+  color: var(--ink);
+  line-height: 1.5;
+}
+.tp-follow-item svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  stroke: var(--green);
+}
+
+/* Before & After slider */
+.tp-ba-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 8px;
+}
+.tp-ba-card {
+  border-radius: 12px;
+  overflow: hidden;
+}
+.tp-ba-slider {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: col-resize;
+  user-select: none;
+  background: #e8e4da;
+}
+.tp-ba-before,
+.tp-ba-after {
+  position: absolute;
+  inset: 0;
+}
+.tp-ba-before img,
+.tp-ba-after img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+}
+.tp-ba-after {
+  clip-path: inset(0 0 0 50%);
+}
+.tp-ba-label {
+  position: absolute;
+  bottom: 10px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 4px;
+  color: #fff;
+}
+.tp-ba-label-before {
+  left: 10px;
+  background: rgba(0,0,0,0.55);
+}
+.tp-ba-label-after {
+  right: 10px;
+  background: rgba(47,158,87,0.85);
+}
+.tp-ba-handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+  z-index: 2;
+}
+.tp-ba-line {
+  width: 2px;
+  flex: 1;
+  background: #fff;
+  box-shadow: 0 0 6px rgba(0,0,0,0.35);
+}
+.tp-ba-circle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  flex-shrink: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--green);
+}
+.tp-ba-caption {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 10px;
+  padding-inline: 4px;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .tp-benefits-grid { grid-template-columns: 1fr 1fr; }
+  .tp-steps-grid { grid-template-columns: 1fr; }
+  .tp-measure-grid { grid-template-columns: 1fr 1fr; }
+  .tp-activities-grid { grid-template-columns: 1fr; }
+  .tp-ba-grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   Tree Plantation — v3 redesign classes
+   ============================================================ */
+
+/* Impact row */
+.tp-impact-row {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  margin-top: 24px;
+}
+.tp-impact-tile {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 32px 24px;
+  gap: 6px;
+}
+.tp-impact-divider {
+  width: 1px;
+  background: var(--line);
+  align-self: stretch;
+  flex-shrink: 0;
+}
+.tp-impact-icon {
+  font-size: 1.8rem;
+  margin-bottom: 4px;
+}
+.tp-impact-big {
+  font-family: var(--serif);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 700;
+  color: var(--green);
+  line-height: 1.1;
+}
+.tp-impact-sub {
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+/* Overview split card */
+.tp-overview-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  margin-top: 24px;
+}
+.tp-overview-text {
+  padding: 36px 32px;
+}
+.tp-overview-text p {
+  font-size: 0.97rem;
+  color: var(--muted);
+  line-height: 1.75;
+  margin-bottom: 14px;
+}
+.tp-overview-text p:last-of-type { margin-bottom: 0; }
+.tp-overview-image {
+  height: 100%;
+  min-height: 280px;
+}
+.tp-overview-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.tp-tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+.tp-tag {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  padding: 5px 14px;
+  color: var(--ink);
+}
+
+/* Challenge dark band */
+.tp-challenge-band {
+  background: var(--dark);
+  margin: 0 calc(-1 * max(24px, (100vw - 1100px) / 2));
+  padding: 64px max(24px, (100vw - 1100px) / 2);
+}
+.tp-challenge-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.tp-challenge-cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 28px;
+}
+.tp-challenge-stat {
+  border-top: 2px solid var(--green);
+  padding-top: 20px;
+}
+.tp-challenge-num {
+  font-family: var(--serif);
+  font-size: 2rem;
+  color: var(--green);
+  margin-bottom: 12px;
+  line-height: 1;
+}
+.tp-challenge-stat p {
+  font-size: 0.92rem;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Benefit icon wrap (SVG version) */
+.tp-benefit-icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px;
+  flex-shrink: 0;
+}
+
+/* Timeline */
+.tp-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 32px;
+}
+.tp-tl-item {
+  display: flex;
+  gap: 24px;
+  position: relative;
+}
+.tp-tl-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+.tp-tl-dot {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--green);
+  color: #fff;
+  font-family: var(--serif);
+  font-size: 0.9rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.tp-tl-line {
+  width: 2px;
+  flex: 1;
+  background: var(--line);
+  margin: 4px 0;
+  min-height: 20px;
+}
+.tp-tl-body {
+  padding-bottom: 36px;
+  flex: 1;
+}
+.tp-tl-body h3 {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 8px;
+  margin-top: 10px;
+}
+.tp-tl-body p {
+  font-size: 0.93rem;
+  color: var(--muted);
+  line-height: 1.7;
+  margin: 0;
+}
+.tp-species-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+.tp-species-row span {
+  font-size: 0.78rem;
+  font-weight: 600;
+  border: 1px solid var(--green);
+  color: var(--green);
+  border-radius: 100px;
+  padding: 3px 12px;
+}
+
+/* Section intro / note */
+.tp-section-intro {
+  font-size: 0.96rem;
+  color: var(--muted);
+  margin-top: -8px;
+  margin-bottom: 20px;
+}
+.tp-note-small {
+  font-size: 0.82rem;
+  color: var(--muted2);
+  margin-top: 14px;
+  line-height: 1.55;
+}
+.tp-note-small code {
+  background: rgba(0,0,0,0.06);
+  border-radius: 4px;
+  padding: 1px 5px;
+  font-size: 0.8rem;
+}
+
+/* Measure num (emoji icon) */
+.tp-measure-num {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  display: block;
+  line-height: 1;
+}
+
+/* Team dark band */
+.tp-team-band {
+  background: var(--ink);
+  margin: 0 calc(-1 * max(24px, (100vw - 1100px) / 2));
+  padding: 64px max(24px, (100vw - 1100px) / 2);
+}
+.tp-team-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+.tp-team-text { }
+.tp-team-btn {
+  display: inline-block;
+  margin-top: 24px;
+  background: var(--green);
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+.tp-team-btn:hover { background: var(--green-dk); }
+
+/* Activities column (inside team band) */
+.tp-activities-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.tp-activity {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 20px;
+}
+.tp-activity-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  line-height: 1;
+  margin-top: 2px;
+}
+.tp-activity h3 {
+  font-family: var(--serif);
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 5px;
+}
+.tp-activity p {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Follow your tree grid */
+.tp-follow-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 24px;
+}
+.tp-follow-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 24px 20px;
+  text-align: center;
+}
+.tp-follow-icon {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+  display: block;
+}
+.tp-follow-card h3 {
+  font-family: var(--serif);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.tp-follow-card p {
+  font-size: 0.86rem;
+  color: var(--muted);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Responsive — v3 */
+@media (max-width: 900px) {
+  .tp-overview-card { grid-template-columns: 1fr; }
+  .tp-overview-image { min-height: 220px; order: -1; }
+  .tp-challenge-cols { grid-template-columns: 1fr; gap: 20px; }
+  .tp-team-inner { grid-template-columns: 1fr; gap: 32px; }
+  .tp-follow-grid { grid-template-columns: repeat(2, 1fr); }
+  .tp-impact-row { flex-direction: column; }
+  .tp-impact-divider { width: auto; height: 1px; }
+}
+@media (max-width: 640px) {
+  .tp-overview-text { padding: 24px 20px; }
+  .tp-follow-grid { grid-template-columns: 1fr 1fr; }
+  .tp-tl-body { padding-bottom: 24px; }
+}
+
+/* ============================================================
+   Rain to Tap project page  (projects/rain-to-tap.html)
+   ============================================================ */
+
+/* Progress band */
+.rtt-progress-band {
+  background: #162e4a;
+  margin: 0 calc(-1 * max(24px, (100vw - 1100px) / 2));
+  padding: 64px max(24px, (100vw - 1100px) / 2);
+}
+.rtt-progress-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.rtt-progress-bar-wrap {
+  max-width: 560px;
+}
+.rtt-progress-bar {
+  height: 18px;
+  background: rgba(255,255,255,0.12);
+  border-radius: 100px;
+  overflow: visible;
+  position: relative;
+  margin-bottom: 8px;
+}
+.rtt-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #2a8fbd, #2f9e57);
+  border-radius: 100px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  transition: width 1s ease;
+}
+.rtt-progress-label {
+  position: absolute;
+  right: -4px;
+  top: -28px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #fff;
+  background: var(--green);
+  border-radius: 6px;
+  padding: 2px 8px;
+  white-space: nowrap;
+}
+.rtt-progress-ends {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Where we install — cards */
+.rtt-where-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 24px;
+}
+.rtt-where-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 28px 22px;
+}
+.rtt-where-icon {
+  width: 52px;
+  height: 52px;
+  background: var(--bg);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.rtt-where-card h3 {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.rtt-where-card p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* Responsive — Rain to Tap */
+@media (max-width: 900px) {
+  .rtt-where-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .rtt-where-grid { gap: 14px; }
+}

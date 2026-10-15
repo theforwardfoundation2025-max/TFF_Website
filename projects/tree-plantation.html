@@ -8,14 +8,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../style.css">
-
 </head>
 <body>
 
 <!-- NAV -->
 <header class="site-header">
   <div class="wrap nav-inner">
-    <a href="../index.html" class="logo-tile"><img src="../assets/img/logo.png" alt="The Forward Foundation"></a>
+    <a href="../index.html" class="logo-tile"><img src="../assets/img/logo.png" alt="The Forward Foundation" loading="eager"></a>
     <ul class="nav-links">
       <li><a href="../index.html" class="nav-link">Home</a></li>
       <li><a href="../about.html" class="nav-link">About Us</a></li>
@@ -43,99 +42,343 @@
 
 <!-- HERO -->
 <section class="proj-detail-hero">
-  <img class="hero-bg" src="../OFA/tree.jpeg" alt="Tree Plantation">
+  <img class="hero-bg" src="../OFA/tree.jpeg" alt="Tree Plantation" loading="eager">
   <div class="hero-overlay"></div>
   <div class="hero-text">
     <a href="../projects.html" class="back-link">
       <svg viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
       Back to Projects
     </a>
-    <div class="proj-eyebrow"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 22V12M12 12C12 7 7 3 7 3s5 2 5 6M12 12c0-5 5-9 5-9s-5 2-5 6"/></svg> OUR PROJECTS</div>
+    <div class="proj-eyebrow">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 2s-5 5-5 9a5 5 0 0010 0c0-4-5-9-5-9z"/><path d="M12 11v9"/></svg>
+      OUR PROJECTS
+    </div>
     <h1>Tree Plantation</h1>
-    <p class="hero-sub">Planting today for a greener tomorrow. Every sapling is a step toward a healthier planet.</p>
+    <p class="hero-sub">Plant a tree. We'll look after it for three years — native Indian trees, planted as established saplings, cared for until they stand on their own.</p>
   </div>
 </section>
 
 <!-- CONTENT -->
 <div class="proj-content-wrap">
 
-  <!-- Overview -->
-  <div class="proj-section">
-    <div class="proj-section-label">PROJECT OVERVIEW</div>
-    <h2>About This Project</h2>
-    <div class="proj-two-col">
-      <p class="placeholder-text">[Project description will be added — explain the background, context and importance of Tree Plantation]</p>
-      <p class="placeholder-text">[Additional overview content — the story behind this project and why it matters to the communities we serve]</p>
-    </div>
-  </div>
-
-  <!-- The Problem -->
-  <div class="proj-section">
-    <div class="proj-section-label">THE CHALLENGE</div>
-    <h2>The Problem We're Solving</h2>
-    <p class="placeholder-text">[Describe the specific environmental or community challenge that Tree Plantation addresses — the scale, the affected communities, the urgency]</p>
-  </div>
-
-  <!-- Our Solution -->
-  <div class="proj-section">
-    <div class="proj-section-label">OUR SOLUTION</div>
-    <h2>How We're Making It Happen</h2>
-    <div class="proj-two-col">
-      <p class="placeholder-text">[Describe TFF's specific approach and methodology for Tree Plantation — the technical solution, the process, what makes it different]</p>
-      <p class="placeholder-text">[Project details — timeline, locations, partners, scale of operations]</p>
-    </div>
-  </div>
-
-  <!-- Impact Numbers -->
+  <!-- ── IMPACT NUMBERS ── -->
   <div class="proj-section">
     <div class="proj-section-label">OUR IMPACT</div>
     <h2>Numbers That Tell the Story</h2>
-    <div class="proj-impact-grid">
-      <div class="proj-impact-card">
-        <!-- EDITABLE: replace with real number -->
-        <div class="proj-impact-num">[XX]+</div>
-        <div class="proj-impact-cap">[Impact metric 1 will be added]</div>
+    <div class="tp-impact-row">
+      <div class="tp-impact-tile">
+        <div class="tp-impact-icon">🌱</div>
+        <div class="tp-impact-big">40,000+</div>
+        <div class="tp-impact-sub">Saplings planted</div>
       </div>
-      <div class="proj-impact-card">
-        <div class="proj-impact-num">[XX]+</div>
-        <div class="proj-impact-cap">[Impact metric 2 will be added]</div>
+      <div class="tp-impact-divider"></div>
+      <div class="tp-impact-tile">
+        <div class="tp-impact-icon">🌾</div>
+        <div class="tp-impact-big">1,50,000+</div>
+        <div class="tp-impact-sub">Seed balls deployed</div>
       </div>
-      <div class="proj-impact-card">
-        <div class="proj-impact-num">[XX]+</div>
-        <div class="proj-impact-cap">[Impact metric 3 will be added]</div>
+      <div class="tp-impact-divider"></div>
+      <div class="tp-impact-tile">
+        <div class="tp-impact-icon">🎯</div>
+        <div class="tp-impact-big">2027</div>
+        <div class="tp-impact-sub">Goal: 2L+ saplings &amp; 3L+ seed balls</div>
       </div>
     </div>
   </div>
 
-  <!-- Project Gallery -->
+  <!-- ── OVERVIEW — split card ── -->
   <div class="proj-section">
-    <div class="proj-section-label">PROJECT GALLERY</div>
-    <h2>Work in Pictures</h2>
-    <div class="proj-gallery-grid">
-      <div class="proj-gallery-ph">[Photo 1 will be added]</div>
-      <div class="proj-gallery-ph">[Photo 2 will be added]</div>
-      <div class="proj-gallery-ph">[Photo 3 will be added]</div>
-      <div class="proj-gallery-ph">[Photo 4 will be added]</div>
-      <div class="proj-gallery-ph">[Photo 5 will be added]</div>
-      <div class="proj-gallery-ph">[Photo 6 will be added]</div>
+    <div class="proj-section-label">PROJECT OVERVIEW</div>
+    <h2>More Than Trees</h2>
+    <div class="tp-overview-card">
+      <div class="tp-overview-text">
+        <p>Every tree we plant works for the city and the community around it. Native Indian species — Neem, Jamun, Mango, Jackfruit, Tamarind, Peepal, Banyan, Pongamia and Badam — are planted as three-year-old saplings and cared for until they can stand on their own.</p>
+        <p>We plant established saplings, not seedlings, because survival rates are significantly higher. Then we provide three full years of watering, weeding and manuring — the critical window when most trees fail — before stepping back and letting the forest take root.</p>
+        <div class="tp-tag-row">
+          <span class="tp-tag">🌿 Native species</span>
+          <span class="tp-tag">💧 3-year care</span>
+          <span class="tp-tag">📍 Verified sites</span>
+        </div>
+      </div>
+      <div class="tp-overview-image">
+        <img src="../OFA/tree.jpeg" alt="Tree plantation site" loading="lazy">
+      </div>
     </div>
   </div>
 
-  <!-- Community -->
+  <!-- ── THE CHALLENGE — dark band ── -->
+  <div class="tp-challenge-band">
+    <div class="tp-challenge-inner">
+      <div class="proj-section-label" style="color:rgba(255,255,255,0.6)">THE CHALLENGE</div>
+      <h2 style="color:#fff;font-family:var(--serif);font-size:clamp(1.5rem,3vw,2.1rem);margin-bottom:20px;">Why Our Cities Need Trees</h2>
+      <div class="tp-challenge-cols">
+        <div class="tp-challenge-stat">
+          <div class="tp-challenge-num">↑</div>
+          <p>Urban temperatures are rising as tree canopy disappears to make way for roads, buildings and concrete.</p>
+        </div>
+        <div class="tp-challenge-stat">
+          <div class="tp-challenge-num">↓</div>
+          <p>Air quality deteriorates, floods worsen without canopy cover, and local wildlife loses its habitat.</p>
+        </div>
+        <div class="tp-challenge-stat">
+          <div class="tp-challenge-num">🌳</div>
+          <p>Trees work best when they are native, well chosen and properly cared for through their early years.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── BENEFITS — icon cards ── -->
   <div class="proj-section">
-    <div class="proj-section-label">COMMUNITY & BENEFICIARIES</div>
-    <h2>The People Behind the Work</h2>
-    <div class="proj-two-col">
-      <p class="placeholder-text">[Community stories and beneficiary information will be added — who benefits, how their lives have changed]</p>
-      <p class="placeholder-text">[Project location details — which villages, cities, districts are covered; a map or location list can be added here]</p>
+    <div class="proj-section-label">ENVIRONMENTAL BENEFITS</div>
+    <h2>What Each Tree Does</h2>
+    <div class="tp-benefits-grid">
+      <div class="tp-benefit-card">
+        <div class="tp-benefit-icon-wrap" style="background:#e8f5ed">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.8"><path d="M12 2C8 6 6 9 6 12a6 6 0 0012 0c0-3-2-6-6-10z"/><line x1="12" y1="12" x2="12" y2="22"/></svg>
+        </div>
+        <h3>Cleaner Air</h3>
+        <p>Carbon sequestration and filtering of particulate matter from the air we breathe every day.</p>
+      </div>
+      <div class="tp-benefit-card">
+        <div class="tp-benefit-icon-wrap" style="background:#e6f2fc">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2a7aab" stroke-width="1.8"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </div>
+        <h3>Cooler Cities</h3>
+        <p>Tree canopy reduces urban heat islands, lowering ambient temperatures in neighbourhoods.</p>
+      </div>
+      <div class="tp-benefit-card">
+        <div class="tp-benefit-icon-wrap" style="background:#f5ede0">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#a06030" stroke-width="1.8"><path d="M12 22V12M12 12C12 8 8 5 4 6M12 12C12 8 16 5 20 6"/><path d="M4 6c0 5 3 9 8 10"/><path d="M20 6c0 5-3 9-8 10"/></svg>
+        </div>
+        <h3>Healthier Soil</h3>
+        <p>Root systems bind soil, preventing erosion and restoring the natural structure of the ground.</p>
+      </div>
+      <div class="tp-benefit-card">
+        <div class="tp-benefit-icon-wrap" style="background:#edf5e8">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.8"><path d="M3 11l9-9 9 9"/><path d="M9 21V12h6v9"/></svg>
+        </div>
+        <h3>Returning Wildlife</h3>
+        <p>As trees mature, migratory birds and local species return to sites we have restored.</p>
+      </div>
+      <div class="tp-benefit-card">
+        <div class="tp-benefit-icon-wrap" style="background:#f0ebfa">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7048ab" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2c2.5 3 4 6.5 4 10s-1.5 7-4 10c-2.5-3-4-6.5-4-10s1.5-7 4-10z"/></svg>
+        </div>
+        <h3>Greener Neighbourhoods</h3>
+        <p>Increased green cover improves quality of life and wellbeing of communities nearby.</p>
+      </div>
     </div>
   </div>
 
-  <!-- CTA Strip -->
+  <!-- ── HOW WE PLANT — timeline steps ── -->
+  <div class="proj-section">
+    <div class="proj-section-label">OUR SOLUTION</div>
+    <h2>How We Plant</h2>
+    <div class="tp-timeline">
+      <div class="tp-tl-item">
+        <div class="tp-tl-left">
+          <div class="tp-tl-dot">01</div>
+          <div class="tp-tl-line"></div>
+        </div>
+        <div class="tp-tl-body">
+          <h3>Native trees only</h3>
+          <p>We select species suited to India's soils and climate — Neem, Jamun, Mango, Jackfruit, Tamarind, Peepal, Banyan, Pongamia and Badam — to maximise survival and ecological value.</p>
+          <div class="tp-species-row">
+            <span>Neem</span><span>Jamun</span><span>Mango</span><span>Peepal</span><span>Banyan</span><span>Pongamia</span>
+          </div>
+        </div>
+      </div>
+      <div class="tp-tl-item">
+        <div class="tp-tl-left">
+          <div class="tp-tl-dot">02</div>
+          <div class="tp-tl-line"></div>
+        </div>
+        <div class="tp-tl-body">
+          <h3>Established saplings</h3>
+          <p>We plant three-year-old saplings rather than seedlings. Survival rates are significantly higher with established plants — it's the difference between a tree that thrives and one that doesn't make it through its first season.</p>
+        </div>
+      </div>
+      <div class="tp-tl-item">
+        <div class="tp-tl-left">
+          <div class="tp-tl-dot">03</div>
+          <div class="tp-tl-line"></div>
+        </div>
+        <div class="tp-tl-body">
+          <h3>Three years of care</h3>
+          <p>Watering, weeding and manuring for three full years — the critical window when most planted trees fail. We step back only when every tree can truly stand on its own.</p>
+        </div>
+      </div>
+      <div class="tp-tl-item">
+        <div class="tp-tl-left">
+          <div class="tp-tl-dot">04</div>
+        </div>
+        <div class="tp-tl-body">
+          <h3>Life returns</h3>
+          <p>As the trees grow, migratory birds and local wildlife come back to the sites. It's the clearest sign that the ecosystem is truly recovering.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── BEFORE & AFTER ── -->
+  <div class="proj-section">
+    <div class="proj-section-label">TRANSFORMATION</div>
+    <h2>Before &amp; After</h2>
+    <p class="tp-section-intro">Drag the slider to see how our plantation sites transform over time.</p>
+    <div class="tp-ba-grid">
+      <div class="tp-ba-card">
+        <div class="tp-ba-slider" id="baSlider1">
+          <div class="tp-ba-before">
+            <img src="../OFA/tree.jpeg" alt="Before plantation" loading="lazy">
+            <div class="tp-ba-label tp-ba-label-before">Before</div>
+          </div>
+          <div class="tp-ba-after">
+            <img src="../OFA/tree.jpeg" alt="After plantation" loading="lazy">
+            <div class="tp-ba-label tp-ba-label-after">After</div>
+          </div>
+          <div class="tp-ba-handle">
+            <div class="tp-ba-line"></div>
+            <div class="tp-ba-circle">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M8 6l-4 6 4 6M16 6l4 6-4 6"/></svg>
+            </div>
+          </div>
+        </div>
+        <p class="tp-ba-caption">Site 1 — [Location name will be added]</p>
+      </div>
+      <div class="tp-ba-card">
+        <div class="tp-ba-slider" id="baSlider2">
+          <div class="tp-ba-before">
+            <img src="../OFA/tree.jpeg" alt="Before plantation" loading="lazy">
+            <div class="tp-ba-label tp-ba-label-before">Before</div>
+          </div>
+          <div class="tp-ba-after">
+            <img src="../OFA/tree.jpeg" alt="After plantation" loading="lazy">
+            <div class="tp-ba-label tp-ba-label-after">After</div>
+          </div>
+          <div class="tp-ba-handle">
+            <div class="tp-ba-line"></div>
+            <div class="tp-ba-circle">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M8 6l-4 6 4 6M16 6l4 6-4 6"/></svg>
+            </div>
+          </div>
+        </div>
+        <p class="tp-ba-caption">Site 2 — [Location name will be added]</p>
+      </div>
+    </div>
+    <p class="tp-note-small">📸 Replace the placeholder images with your actual before/after photos by updating the <code>src</code> attributes.</p>
+  </div>
+
+  <!-- ── MEASURE & REPORT — accent cards ── -->
+  <div class="proj-section">
+    <div class="proj-section-label">TRANSPARENCY</div>
+    <h2>How We Measure and Report</h2>
+    <div class="tp-measure-grid">
+      <div class="tp-measure-card">
+        <div class="tp-measure-num">📋</div>
+        <h3>What was planted</h3>
+        <p>Number of saplings, species breakdown and planting date for every site.</p>
+      </div>
+      <div class="tp-measure-card">
+        <div class="tp-measure-num">📍</div>
+        <h3>Where</h3>
+        <p>Site-level location records with dated photographs from every plantation drive.</p>
+      </div>
+      <div class="tp-measure-card">
+        <div class="tp-measure-num">📈</div>
+        <h3>How they are doing</h3>
+        <p>Survival checks through the three-year care period, with annual updates shared with supporters.</p>
+      </div>
+      <div class="tp-measure-card">
+        <div class="tp-measure-num">🏅</div>
+        <h3>Proof for partners</h3>
+        <p>Certified utilisation certificates and customised ESG progress reports for corporate partners.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── PLANT AS A TEAM — split layout ── -->
+  <div class="tp-team-band">
+    <div class="tp-team-inner">
+      <div class="tp-team-text">
+        <div class="proj-section-label" style="color:rgba(255,255,255,0.55)">COMMUNITY &amp; PARTNERS</div>
+        <h2 style="color:#fff;font-family:var(--serif);font-size:clamp(1.4rem,3vw,2rem);margin-bottom:16px;">Plant as a Team</h2>
+        <p style="color:rgba(255,255,255,0.82);font-size:0.95rem;line-height:1.7;margin-bottom:12px;">Our projects are powered by people — from corporate employee volunteer teams to neighbourhood groups. Leave with a measurable record of what your team achieved.</p>
+        <p style="color:rgba(255,255,255,0.7);font-size:0.88rem;line-height:1.6;">Choose your priority and region — we'll send a customised proposal with a transparent budget and verifiable impact metrics.</p>
+        <a href="../contact.html" class="tp-team-btn">Get a proposal →</a>
+      </div>
+      <div class="tp-activities-col">
+        <div class="tp-activity">
+          <div class="tp-activity-icon">🌳</div>
+          <div>
+            <h3>Plantation drive</h3>
+            <p>Plant native saplings with our team on site. A hands-on activity with lasting impact.</p>
+          </div>
+        </div>
+        <div class="tp-activity">
+          <div class="tp-activity-icon">🌾</div>
+          <div>
+            <h3>Seed ball making</h3>
+            <p>An easy indoor activity — seed balls made in office spaces, deployed across sites.</p>
+          </div>
+        </div>
+        <div class="tp-activity">
+          <div class="tp-activity-icon">🧹</div>
+          <div>
+            <h3>Clean-up or awareness day</h3>
+            <p>Pair planting with a clean-up, wall painting or an expert-led environmental session.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── CSR PARTNERS ── -->
+  <div class="proj-section">
+    <div class="proj-section-label">CSR PARTNERS</div>
+    <h2>Organisations That Have Planted With Us</h2>
+    <div class="tp-partner-logos">
+      <span>Allstate India</span><span>Amadeus</span><span>Cargill</span>
+      <span>Celonis</span><span>CSG</span><span>Danske IT</span>
+      <span>KPMG</span><span>Manhattan Associates</span><span>Novo Nordisk</span>
+      <span>Natixis</span><span>Unisys</span><span>Swiss Re</span>
+      <span>Scientific Games</span><span>Wells Fargo</span><span>Envestnet Yodlee</span>
+    </div>
+  </div>
+
+  <!-- ── FOLLOW YOUR TREE ── -->
+  <div class="proj-section">
+    <div class="proj-section-label">WHAT YOU RECEIVE</div>
+    <h2>Follow Your Tree</h2>
+    <div class="tp-follow-grid">
+      <div class="tp-follow-card">
+        <div class="tp-follow-icon">📩</div>
+        <h3>Confirmation</h3>
+        <p>A confirmation with the site name and tree species you've supported.</p>
+      </div>
+      <div class="tp-follow-card">
+        <div class="tp-follow-icon">📸</div>
+        <h3>Photo updates</h3>
+        <p>Regular photo updates from the field so you can watch your tree grow.</p>
+      </div>
+      <div class="tp-follow-card">
+        <div class="tp-follow-icon">🧾</div>
+        <h3>Tax receipt</h3>
+        <p>An 80G tax receipt for your contribution, valid under Indian income tax law.</p>
+      </div>
+      <div class="tp-follow-card">
+        <div class="tp-follow-icon">📅</div>
+        <h3>Annual updates</h3>
+        <p>Survival status updates every year through the full three-year care period.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── CTA ── -->
   <div class="proj-cta-strip">
     <div>
       <h3>Support Tree Plantation</h3>
-      <p>Your contribution directly funds this project and the communities it serves.</p>
+      <p>Your contribution plants native trees and funds three years of care so they truly survive.</p>
     </div>
     <a href="https://rzp.io/rzp/tffindia" target="_blank">
       Donate Now
@@ -143,12 +386,12 @@
     </a>
   </div>
 
-</div>
+</div><!-- /proj-content-wrap -->
 
 <footer id="contact" class="site-footer"><div class="wrap footer-inner">
   <div class="footer-grid">
     <div class="footer-brand">
-      <span class="logo-tile"><img src="../assets/img/logo.png" alt="The Forward Foundation"></span>
+      <span class="logo-tile"><img src="../assets/img/logo.png" alt="The Forward Foundation" loading="eager"></span>
       <p>Environmental Solutions for Climate-Secure Communities. Registered NGO · India.</p>
       <div class="footer-tag"><span class="t">LIVE</span><span class="sep">|</span><span class="t">DEVELOP</span><span class="sep">|</span><span class="t">SUSTAIN</span></div>
     </div>
@@ -164,6 +407,36 @@ document.getElementById('hamburger').addEventListener('click', function() {
   document.getElementById('mobile-menu').classList.toggle('open');
   this.classList.toggle('open');
 });
+
+// Before & After slider
+function initSlider(slider) {
+  var after = slider.querySelector('.tp-ba-after');
+  var handle = slider.querySelector('.tp-ba-handle');
+  after.style.clipPath = 'inset(0 0 0 50%)';
+  handle.style.left = '50%';
+
+  function setPos(x) {
+    var rect = slider.getBoundingClientRect();
+    var pct = Math.min(100, Math.max(0, (x - rect.left) / rect.width * 100));
+    after.style.clipPath = 'inset(0 0 0 ' + pct + '%)';
+    handle.style.left = pct + '%';
+  }
+  slider.addEventListener('mousedown', function(e) {
+    e.preventDefault();
+    var move = function(e) { setPos(e.clientX); };
+    var up = function() { window.removeEventListener('mousemove', move); window.removeEventListener('mouseup', up); };
+    window.addEventListener('mousemove', move);
+    window.addEventListener('mouseup', up);
+  });
+  slider.addEventListener('touchstart', function(e) {
+    e.preventDefault();
+    var move = function(e) { setPos(e.touches[0].clientX); };
+    var up = function() { window.removeEventListener('touchmove', move); window.removeEventListener('touchend', up); };
+    window.addEventListener('touchmove', move, { passive: false });
+    window.addEventListener('touchend', up);
+  }, { passive: false });
+}
+document.querySelectorAll('.tp-ba-slider').forEach(initSlider);
 </script>
 </body>
 </html>

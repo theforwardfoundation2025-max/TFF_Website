@@ -8,14 +8,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../style.css">
-
 </head>
 <body>
 
 <!-- NAV -->
 <header class="site-header">
   <div class="wrap nav-inner">
-    <a href="../index.html" class="logo-tile"><img src="../assets/img/logo.png" alt="The Forward Foundation"></a>
+    <a href="../index.html" class="logo-tile"><img src="../assets/img/logo.png" alt="The Forward Foundation" loading="eager"></a>
     <ul class="nav-links">
       <li><a href="../index.html" class="nav-link">Home</a></li>
       <li><a href="../about.html" class="nav-link">About Us</a></li>
@@ -43,71 +42,342 @@
 
 <!-- HERO -->
 <section class="proj-detail-hero">
-  <img class="hero-bg" src="../OFA/rainwater.jpeg" alt="Rain to Tap">
+  <img class="hero-bg" src="../OFA/rainwater.jpeg" alt="Rain to Tap" loading="eager">
   <div class="hero-overlay"></div>
   <div class="hero-text">
     <a href="../projects.html" class="back-link">
       <svg viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
       Back to Projects
     </a>
-    <div class="proj-eyebrow"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 2C12 2 5 10 5 15a7 7 0 0014 0c0-5-7-13-7-13z"/></svg> OUR PROJECTS</div>
+    <div class="proj-eyebrow">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 2C12 2 5 10 5 15a7 7 0 0014 0c0-5-7-13-7-13z"/></svg>
+      OUR PROJECTS
+    </div>
     <h1>Rain to Tap</h1>
-    <p class="hero-sub">Capturing every drop. Creating lasting water security for communities across India.</p>
+    <p class="hero-sub">Beyond harvesting, complete water security — from the rooftop to a safe tap to groundwater recharge.</p>
   </div>
 </section>
 
 <!-- CONTENT -->
 <div class="proj-content-wrap">
 
-  <!-- Overview -->
-  <div class="proj-section">
-    <div class="proj-section-label">PROJECT OVERVIEW</div>
-    <h2>About This Project</h2>
-    <div class="proj-two-col">
-      <p class="placeholder-text">[Project description will be added — explain the background, context and importance of Rain to Tap]</p>
-      <p class="placeholder-text">[Additional overview content — the story behind this project and why it matters to the communities we serve]</p>
-    </div>
-  </div>
-
-  <!-- The Problem -->
-  <div class="proj-section">
-    <div class="proj-section-label">THE CHALLENGE</div>
-    <h2>The Problem We're Solving</h2>
-    <p class="placeholder-text">[Describe the specific environmental or community challenge that Rain to Tap addresses — the scale, the affected communities, the urgency]</p>
-  </div>
-
-  <!-- Our Solution -->
-  <div class="proj-section">
-    <div class="proj-section-label">OUR SOLUTION</div>
-    <h2>How We're Making It Happen</h2>
-    <div class="proj-two-col">
-      <p class="placeholder-text">[Describe TFF's specific approach and methodology for Rain to Tap — the technical solution, the process, what makes it different]</p>
-      <p class="placeholder-text">[Project details — timeline, locations, partners, scale of operations]</p>
-    </div>
-  </div>
-
-  <!-- Impact Numbers -->
+  <!-- ── IMPACT ROW ── -->
   <div class="proj-section">
     <div class="proj-section-label">OUR IMPACT</div>
     <h2>Numbers That Tell the Story</h2>
-    <div class="proj-impact-grid">
-      <div class="proj-impact-card">
-        <!-- EDITABLE: replace with real number -->
-        <div class="proj-impact-num">[XX]+</div>
-        <div class="proj-impact-cap">[Impact metric 1 will be added]</div>
+    <div class="tp-impact-row">
+      <div class="tp-impact-tile">
+        <div class="tp-impact-icon">💧</div>
+        <div class="tp-impact-big">95M+</div>
+        <div class="tp-impact-sub">Litres of water saved or stored</div>
       </div>
-      <div class="proj-impact-card">
-        <div class="proj-impact-num">[XX]+</div>
-        <div class="proj-impact-cap">[Impact metric 2 will be added]</div>
+      <div class="tp-impact-divider"></div>
+      <div class="tp-impact-tile">
+        <div class="tp-impact-icon">🏫</div>
+        <div class="tp-impact-big">120+</div>
+        <div class="tp-impact-sub">Schools and project sites completed</div>
       </div>
-      <div class="proj-impact-card">
-        <div class="proj-impact-num">[XX]+</div>
-        <div class="proj-impact-cap">[Impact metric 3 will be added]</div>
+      <div class="tp-impact-divider"></div>
+      <div class="tp-impact-tile">
+        <div class="tp-impact-icon">👥</div>
+        <div class="tp-impact-big">82,000+</div>
+        <div class="tp-impact-sub">Students and community members benefited</div>
       </div>
     </div>
   </div>
 
-  <!-- Project Gallery -->
+  <!-- ── WHAT IT IS — split card ── -->
+  <div class="proj-section">
+    <div class="proj-section-label">PROJECT OVERVIEW</div>
+    <h2>Why We Call It Rain to Tap</h2>
+    <div class="tp-overview-card">
+      <div class="tp-overview-text">
+        <p>Rain to Tap is our answer to the national water crisis. Rainwater harvesting usually stops at collecting the rain. We take it all the way: from the rooftop, through a series of nature-inspired filtration stages, to a safe tap that people can use every day — while the surplus recharges the groundwater beneath.</p>
+        <p>That is why we call it Rain to Tap, not just rainwater harvesting. We began in government schools — providing safe water for daily use and groundwater recharge at the same time. Relief today, while securing tomorrow.</p>
+        <div class="tp-tag-row">
+          <span class="tp-tag">💧 Zero electricity</span>
+          <span class="tp-tag">🔄 Self-sustaining filter</span>
+          <span class="tp-tag">🌱 Groundwater recharge</span>
+          <span class="tp-tag">📍 Karnataka &amp; Pune</span>
+        </div>
+      </div>
+      <div class="tp-overview-image">
+        <img src="../OFA/rainwater.jpeg" alt="Rain to Tap installation" loading="lazy">
+      </div>
+    </div>
+  </div>
+
+  <!-- ── CHALLENGE BAND ── -->
+  <div class="tp-challenge-band">
+    <div class="tp-challenge-inner">
+      <div class="proj-section-label" style="color:rgba(255,255,255,0.6)">THE CHALLENGE</div>
+      <h2 style="color:#fff;font-family:var(--serif);font-size:clamp(1.5rem,3vw,2.1rem);margin-bottom:20px;">India's Water Crisis, School by School</h2>
+      <div class="tp-challenge-cols">
+        <div class="tp-challenge-stat">
+          <div class="tp-challenge-num">🚱</div>
+          <p>Millions of school children lack access to safe drinking water every day, affecting attendance, health and learning outcomes.</p>
+        </div>
+        <div class="tp-challenge-stat">
+          <div class="tp-challenge-num">📉</div>
+          <p>Groundwater levels are falling across Karnataka and Maharashtra as urban growth and agriculture drain aquifers faster than rain can recharge them.</p>
+        </div>
+        <div class="tp-challenge-stat">
+          <div class="tp-challenge-num">🌧️</div>
+          <p>India receives enough rainfall to solve its water problem — but without infrastructure to capture, filter and store it, most of it is lost.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── HOW IT WORKS — filtration timeline ── -->
+  <div class="proj-section">
+    <div class="proj-section-label">OUR SOLUTION</div>
+    <h2>How It Works</h2>
+    <p class="tp-section-intro">Seven filtration stages take rainwater from the rooftop to a safe, drinkable tap — with the overflow recharging the groundwater below.</p>
+    <div class="tp-timeline">
+      <div class="tp-tl-item">
+        <div class="tp-tl-left">
+          <div class="tp-tl-dot">01</div>
+          <div class="tp-tl-line"></div>
+        </div>
+        <div class="tp-tl-body">
+          <h3>Leaf Filter</h3>
+          <p>The first stage catches leaves, twigs and large debris from the rooftop before water enters the system.</p>
+        </div>
+      </div>
+      <div class="tp-tl-item">
+        <div class="tp-tl-left">
+          <div class="tp-tl-dot">02</div>
+          <div class="tp-tl-line"></div>
+        </div>
+        <div class="tp-tl-body">
+          <h3>First Flush Device</h3>
+          <p>The initial, most contaminated runoff from the roof is diverted away automatically, so only cleaner water continues through the system.</p>
+        </div>
+      </div>
+      <div class="tp-tl-item">
+        <div class="tp-tl-left">
+          <div class="tp-tl-dot">03</div>
+          <div class="tp-tl-line"></div>
+        </div>
+        <div class="tp-tl-body">
+          <h3>Ferro Filter</h3>
+          <p>A nature-inspired filtration layer removes fine particulates and improves water clarity before the sump.</p>
+        </div>
+      </div>
+      <div class="tp-tl-item">
+        <div class="tp-tl-left">
+          <div class="tp-tl-dot">04</div>
+          <div class="tp-tl-line"></div>
+        </div>
+        <div class="tp-tl-body">
+          <h3>Multi-Use Sump</h3>
+          <p>The sump stores filtered rainwater and can also accept municipal and other water sources — making the system resilient year-round, not just in monsoon.</p>
+        </div>
+      </div>
+      <div class="tp-tl-item">
+        <div class="tp-tl-left">
+          <div class="tp-tl-dot">05</div>
+          <div class="tp-tl-line"></div>
+        </div>
+        <div class="tp-tl-body">
+          <h3>Silt Trap</h3>
+          <p>Settled silt and fine sediment are removed before overflow water moves to the recharge infrastructure.</p>
+        </div>
+      </div>
+      <div class="tp-tl-item">
+        <div class="tp-tl-left">
+          <div class="tp-tl-dot">06</div>
+          <div class="tp-tl-line"></div>
+        </div>
+        <div class="tp-tl-body">
+          <h3>Recharge Pit</h3>
+          <p>Overflow water percolates slowly through a gravel-and-sand pit, recharging the soil layer above the aquifer.</p>
+        </div>
+      </div>
+      <div class="tp-tl-item">
+        <div class="tp-tl-left">
+          <div class="tp-tl-dot">07</div>
+        </div>
+        <div class="tp-tl-body">
+          <h3>Borewell Recharge</h3>
+          <p>The final overflow feeds directly into the local borewell, raising groundwater levels for the entire community — not just the school.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── WHAT MAKES IT SUPERIOR ── -->
+  <div class="proj-section">
+    <div class="proj-section-label">WHY IT WORKS</div>
+    <h2>What Makes It Superior</h2>
+    <div class="tp-benefits-grid">
+      <div class="tp-benefit-card">
+        <div class="tp-benefit-icon-wrap" style="background:#e6f2fc">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2a7aab" stroke-width="1.8"><path d="M12 2C12 2 5 10 5 15a7 7 0 0014 0c0-5-7-13-7-13z"/><path d="M12 15v4"/><circle cx="12" cy="20" r="1" fill="#2a7aab"/></svg>
+        </div>
+        <h3>6-Level Filtration</h3>
+        <p>Multiple natural filtration stages working in sequence — removing debris, particulates and silt before the tap.</p>
+      </div>
+      <div class="tp-benefit-card">
+        <div class="tp-benefit-icon-wrap" style="background:#e8f5ed">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+        </div>
+        <h3>Zero Electricity</h3>
+        <p>Gravity-fed throughout. No pump, no power bill, no breakdown risk — the system runs itself.</p>
+      </div>
+      <div class="tp-benefit-card">
+        <div class="tp-benefit-icon-wrap" style="background:#f5ede0">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#a06030" stroke-width="1.8"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><path d="M12 12v4M10 14h4"/></svg>
+        </div>
+        <h3>Dual Water Security</h3>
+        <p>Safe drinking water from the tap today, and rising groundwater for the community tomorrow — two outcomes in one system.</p>
+      </div>
+      <div class="tp-benefit-card">
+        <div class="tp-benefit-icon-wrap" style="background:#f0ebfa">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7048ab" stroke-width="1.8"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+        </div>
+        <h3>Data-Driven Impact</h3>
+        <p>Verifiable litres saved and recharged per site, with certified utilisation certificates and ESG progress reports for partners.</p>
+      </div>
+      <div class="tp-benefit-card">
+        <div class="tp-benefit-icon-wrap" style="background:#fef3e2">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b0863a" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3>School-First Design</h3>
+        <p>Built for government schools — robust, low-maintenance, safe for daily student use, with community access built in.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── PROGRESS BAND ── -->
+  <div class="rtt-progress-band">
+    <div class="rtt-progress-inner">
+      <div class="proj-section-label" style="color:rgba(255,255,255,0.6)">2030 GOAL</div>
+      <h2 style="color:#fff;font-family:var(--serif);font-size:clamp(1.4rem,3vw,2rem);margin-bottom:8px;">120+ Schools Done. Goal: 1,000+ by 2030.</h2>
+      <p style="color:rgba(255,255,255,0.7);font-size:0.93rem;margin-bottom:28px;">Every school we complete gives students safe water and recharges the groundwater for the whole community.</p>
+      <div class="rtt-progress-bar-wrap">
+        <div class="rtt-progress-bar">
+          <div class="rtt-progress-fill" style="width:12%">
+            <span class="rtt-progress-label">120+</span>
+          </div>
+        </div>
+        <div class="rtt-progress-ends">
+          <span style="color:rgba(255,255,255,0.5);font-size:0.8rem">0</span>
+          <span style="color:rgba(255,255,255,0.5);font-size:0.8rem">1,000 schools</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── WHERE WE INSTALL ── -->
+  <div class="proj-section">
+    <div class="proj-section-label">WHERE WE WORK</div>
+    <h2>Government Schools Across Karnataka &amp; Pune</h2>
+    <div class="rtt-where-grid">
+      <div class="rtt-where-card">
+        <div class="rtt-where-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.6"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3>Karnataka</h3>
+        <p>Government schools across Bengaluru and surrounding districts, with installations dating back to our earliest pilot sites.</p>
+      </div>
+      <div class="rtt-where-card">
+        <div class="rtt-where-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2a7aab" stroke-width="1.6"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3>Pune</h3>
+        <p>Expanding into Maharashtra's government schools, where water scarcity and groundwater depletion are acutely felt.</p>
+      </div>
+      <div class="rtt-where-card">
+        <div class="rtt-where-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#b0863a" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <h3>Expanding</h3>
+        <p>With CSR partner support, we are identifying the next 100 schools. Get in touch to nominate a school in your region.</p>
+      </div>
+    </div>
+    <p class="tp-note-small">📍 A school-level map with pinned installations, filters by district and year, and a sponsor attribution will be added here — TFF to supply the school list as a spreadsheet.</p>
+  </div>
+
+  <!-- ── PARTNER BAND ── -->
+  <div class="tp-team-band">
+    <div class="tp-team-inner">
+      <div class="tp-team-text">
+        <div class="proj-section-label" style="color:rgba(255,255,255,0.55)">PARTNER WITH US</div>
+        <h2 style="color:#fff;font-family:var(--serif);font-size:clamp(1.4rem,3vw,2rem);margin-bottom:16px;">Fund a School. See the Proof.</h2>
+        <p style="color:rgba(255,255,255,0.82);font-size:0.95rem;line-height:1.7;margin-bottom:12px;">Choose your priority — Water, Solar or Tree Plantation — and tell us your preferred region. We will send a customised proposal with a transparent line-item budget and verifiable metrics.</p>
+        <p style="color:rgba(255,255,255,0.7);font-size:0.88rem;line-height:1.6;">Every installation comes with a utilisation certificate, site photographs and an ESG progress report for your CSR team.</p>
+        <a href="../contact.html" class="tp-team-btn">Get a proposal →</a>
+      </div>
+      <div class="tp-activities-col">
+        <div class="tp-activity">
+          <div class="tp-activity-icon">🏫</div>
+          <div>
+            <h3>Sponsor a school</h3>
+            <p>Fund a full Rain to Tap installation at one government school. Your name on the site, your logo in our partner wall.</p>
+          </div>
+        </div>
+        <div class="tp-activity">
+          <div class="tp-activity-icon">📊</div>
+          <div>
+            <h3>Verified ESG reporting</h3>
+            <p>Certified utilisation certificates, impact metrics, and a sample site data sheet — ready for your annual CSR report.</p>
+          </div>
+        </div>
+        <div class="tp-activity">
+          <div class="tp-activity-icon">🌐</div>
+          <div>
+            <h3>Multi-pillar partnership</h3>
+            <p>Combine Rain to Tap with Solar or Tree Plantation for a broader, cross-pillar environmental partnership.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── CSR PARTNERS ── -->
+  <div class="proj-section">
+    <div class="proj-section-label">CSR PARTNERS</div>
+    <h2>Organisations That Have Partnered With Us</h2>
+    <div class="tp-partner-logos">
+      <span>Allstate India</span><span>Amadeus</span><span>Cargill</span>
+      <span>Celonis</span><span>CSG</span><span>Danske IT</span>
+      <span>KPMG</span><span>Manhattan Associates</span><span>Novo Nordisk</span>
+      <span>Natixis</span><span>Unisys</span><span>Swiss Re</span>
+      <span>Scientific Games</span><span>Wells Fargo</span><span>Envestnet Yodlee</span>
+    </div>
+  </div>
+
+  <!-- ── WHAT YOU GET ── -->
+  <div class="proj-section">
+    <div class="proj-section-label">PROOF &amp; TRANSPARENCY</div>
+    <h2>What Partners Receive</h2>
+    <div class="tp-follow-grid">
+      <div class="tp-follow-card">
+        <div class="tp-follow-icon">📋</div>
+        <h3>Utilisation Certificate</h3>
+        <p>A certified document confirming how funds were used, suitable for statutory CSR compliance filings.</p>
+      </div>
+      <div class="tp-follow-card">
+        <div class="tp-follow-icon">📸</div>
+        <h3>Site Photography</h3>
+        <p>Installation and post-handover photographs from the school, including the tap in daily use.</p>
+      </div>
+      <div class="tp-follow-card">
+        <div class="tp-follow-icon">📈</div>
+        <h3>ESG Progress Report</h3>
+        <p>Customised impact metrics — litres saved, students benefited, groundwater recharged — formatted for your reporting.</p>
+      </div>
+      <div class="tp-follow-card">
+        <div class="tp-follow-icon">🧾</div>
+        <h3>80G Tax Receipt</h3>
+        <p>A valid 80G tax deduction receipt for every contribution, issued by our registered trust.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── GALLERY placeholders ── -->
   <div class="proj-section">
     <div class="proj-section-label">PROJECT GALLERY</div>
     <h2>Work in Pictures</h2>
@@ -121,21 +391,11 @@
     </div>
   </div>
 
-  <!-- Community -->
-  <div class="proj-section">
-    <div class="proj-section-label">COMMUNITY & BENEFICIARIES</div>
-    <h2>The People Behind the Work</h2>
-    <div class="proj-two-col">
-      <p class="placeholder-text">[Community stories and beneficiary information will be added — who benefits, how their lives have changed]</p>
-      <p class="placeholder-text">[Project location details — which villages, cities, districts are covered; a map or location list can be added here]</p>
-    </div>
-  </div>
-
-  <!-- CTA Strip -->
+  <!-- ── CTA STRIP ── -->
   <div class="proj-cta-strip">
     <div>
       <h3>Support Rain to Tap</h3>
-      <p>Your contribution directly funds this project and the communities it serves.</p>
+      <p>Your contribution brings safe water to a school and recharges the groundwater for an entire community.</p>
     </div>
     <a href="https://rzp.io/rzp/tffindia" target="_blank">
       Donate Now
@@ -143,12 +403,12 @@
     </a>
   </div>
 
-</div>
+</div><!-- /proj-content-wrap -->
 
 <footer id="contact" class="site-footer"><div class="wrap footer-inner">
   <div class="footer-grid">
     <div class="footer-brand">
-      <span class="logo-tile"><img src="../assets/img/logo.png" alt="The Forward Foundation"></span>
+      <span class="logo-tile"><img src="../assets/img/logo.png" alt="The Forward Foundation" loading="eager"></span>
       <p>Environmental Solutions for Climate-Secure Communities. Registered NGO · India.</p>
       <div class="footer-tag"><span class="t">LIVE</span><span class="sep">|</span><span class="t">DEVELOP</span><span class="sep">|</span><span class="t">SUSTAIN</span></div>
     </div>
